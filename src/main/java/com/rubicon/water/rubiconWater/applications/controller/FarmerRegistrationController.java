@@ -50,10 +50,10 @@ public class FarmerRegistrationController {
             if (!farmerContext.isValid())
                 throw new BadRequestException("The request body doesn't seems to be valid");
 
-            if (farmerContext.getEmailId().matches(validEmailRegex))
+            if (!farmerContext.getEmailId().matches(validEmailRegex))
                 throw new IllegalArgumentException("The provided email does not seems to be valid");
 
-            if (farmerContext.getMobile().matches(validPhoneRegex))
+            if (!farmerContext.getMobile().matches(validPhoneRegex))
                 throw new IllegalArgumentException("The provided mobile does not seems to be valid");
 
             //generates farmer id
