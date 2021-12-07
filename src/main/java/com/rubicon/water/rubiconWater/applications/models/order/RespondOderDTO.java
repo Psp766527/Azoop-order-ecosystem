@@ -30,7 +30,7 @@ public class RespondOderDTO {
 
     /**
      * This constructor sets the value of Response object by fetching details from orderContext.
-     * @param orderContext it is the order details context
+     * @param orderContext it is the order details context.
      */
     public RespondOderDTO(OrderDAO orderContext) {
         this.orderId = orderContext.getOrderId();
