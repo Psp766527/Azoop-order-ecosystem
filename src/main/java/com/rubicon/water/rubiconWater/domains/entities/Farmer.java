@@ -21,25 +21,17 @@ public class Farmer {
 
     @Id
     String id;
-
     @Indexed(unique = true)
     String farmerId;
-
     @Indexed(unique = true)
     String farmId;
-
     String firstName;
-
     String middleName;
-
     String lastName;
-
     @Indexed(unique = true)
     String mobile;
-
     @Indexed(unique = true)
     String emailId;
-
     String availableSlot;
 
     /**

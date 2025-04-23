@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface FarmerDAOMongoRepository extends MongoRepository<FarmerDAO,String> {
+public interface FarmerDAOMongoRepository extends MongoRepository<FarmerDAO, String> {
 
     @Query("{farmId: ?0}")
-        FarmerDAO fetchByFarmId(String farmId);
+    FarmerDAO fetchByFarmId(String farmId);
 }
