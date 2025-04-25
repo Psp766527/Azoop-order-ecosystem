@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rubiconwater
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rubiconwater
+  template:
+    metadata:
+      labels:
+        app: rubiconwater
+    spec:
+      containers:
+        - name: rubiconwater
+          image: rubiconwater:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8100
+            - containerPort: 5005
+          env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: mongodb://mongodb-service:27017/anchorRubicon
